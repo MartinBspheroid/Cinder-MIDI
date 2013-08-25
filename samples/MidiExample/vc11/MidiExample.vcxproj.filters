@@ -50,31 +50,31 @@
     <ClInclude Include="..\include\Resources.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MidiConstants.h">
+    <ClInclude Include="..\..\..\include\MidiConstants.h">
       <Filter>Blocks\Cinder-MIDI\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MidiExceptions.h">
+    <ClInclude Include="..\..\..\include\MidiExceptions.h">
       <Filter>Blocks\Cinder-MIDI\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MidiHeaders.h">
+    <ClInclude Include="..\..\..\include\MidiHeaders.h">
       <Filter>Blocks\Cinder-MIDI\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MidiHub.h">
+    <ClInclude Include="..\..\..\include\MidiHub.h">
       <Filter>Blocks\Cinder-MIDI\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MidiIn.h">
+    <ClInclude Include="..\..\..\include\MidiIn.h">
       <Filter>Blocks\Cinder-MIDI\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MidiMessage.h">
+    <ClInclude Include="..\..\..\include\MidiMessage.h">
       <Filter>Blocks\Cinder-MIDI\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\MidiOut.h">
+    <ClInclude Include="..\..\..\include\MidiOut.h">
       <Filter>Blocks\Cinder-MIDI\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\RtError.h">
+    <ClInclude Include="..\..\..\include\RtError.h">
       <Filter>Blocks\Cinder-MIDI\include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\RtMidi.h">
+    <ClInclude Include="..\..\..\include\RtMidi.h">
       <Filter>Blocks\Cinder-MIDI\include</Filter>
     </ClInclude>
   </ItemGroup>

@@ -55,7 +55,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;..\..\..\src;..\..\..\..\..\include;..\..\..\..\..\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\..\..\src;..\..\..\include;..\..\..\..\..\include;..\..\..\..\..\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -85,7 +85,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;..\..\..\src;..\..\..\..\..\include;..\..\..\..\..\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\..\..\src;..\..\..\include;..\..\..\..\..\include;..\..\..\..\..\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
@@ -123,15 +123,15 @@
     <ClCompile Include="..\src\MidiExampleApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\src\MidiConstants.h" />
-    <ClInclude Include="..\..\..\src\MidiExceptions.h" />
-    <ClInclude Include="..\..\..\src\MidiHeaders.h" />
-    <ClInclude Include="..\..\..\src\MidiHub.h" />
-    <ClInclude Include="..\..\..\src\MidiIn.h" />
-    <ClInclude Include="..\..\..\src\MidiMessage.h" />
-    <ClInclude Include="..\..\..\src\MidiOut.h" />
-    <ClInclude Include="..\..\..\src\RtError.h" />
-    <ClInclude Include="..\..\..\src\RtMidi.h" />
+    <ClInclude Include="..\..\..\include\MidiConstants.h" />
+    <ClInclude Include="..\..\..\include\MidiExceptions.h" />
+    <ClInclude Include="..\..\..\include\MidiHeaders.h" />
+    <ClInclude Include="..\..\..\include\MidiHub.h" />
+    <ClInclude Include="..\..\..\include\MidiIn.h" />
+    <ClInclude Include="..\..\..\include\MidiMessage.h" />
+    <ClInclude Include="..\..\..\include\MidiOut.h" />
+    <ClInclude Include="..\..\..\include\RtError.h" />
+    <ClInclude Include="..\..\..\include\RtMidi.h" />
     <ClInclude Include="..\include\Resources.h" />
   </ItemGroup>
   <ItemGroup>
