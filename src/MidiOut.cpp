@@ -5,11 +5,13 @@
 //
 //
 
+#include <string>
+#include <vector>
+#include <sstream>
+#include <assert.h>
 #include "MidiOut.h"
-#include "cinder/Utilities.h"
-#include "cinder/app/App.h"
 
-using namespace ci;
+
 using namespace cinder::midi;
 using namespace std;
 
@@ -18,7 +20,8 @@ bool MidiOut::sVerboseLogging = false;
 /// Set the output client name (optional).
 MidiOut::MidiOut(std::string const& name)
 : mName(name)
-, mRtMidiOut(new RtMidiOut(name))
+, mRtMidiOut(new RtMidiOut())
+//, mRtMidiOut(new RtMidiOut(name))
 , mPortNumber(-1)
 , mIsVirtual(false)
 , mBytes(3)
@@ -66,17 +69,19 @@ bool MidiOut::openPort(unsigned int portNumber)
 	try
 	{
 		closePort();
-		mRtMidiOut->openPort(portNumber, mName+" Output "+toString(portNumber));
+        std::stringstream ss;
+        ss << mName << "Output " << portNumber;
+		mRtMidiOut->openPort( portNumber, ss.str() );
 	}
 	catch(RtError& err)
 	{
-		app::console() << "[ERROR ci::midi::MidiOut::openPort] couldn't open port " << portNumber << " " << err.getMessage() << std::endl;
+        std::cout << "[ERROR ci::midi::MidiOut::openPort] couldn't open port " << portNumber << " " << err.getMessage() << std::endl;
 		return false;
 	}
 	mPortNumber = portNumber;
 	mPortName = mRtMidiOut->getPortName(portNumber);
 	if (sVerboseLogging)
-		app::console() << "[VERBOSE ci::midi::MidiOut::openPort] opened port " << portNumber << " " << mPortName << std::endl;
+		std::cout << "[VERBOSE ci::midi::MidiOut::openPort] opened port " << portNumber << " " << mPortName << std::endl;
 	return true;
 }
 
@@ -95,14 +100,14 @@ bool MidiOut::openVirtualPort(std::string const& portName)
 		mRtMidiOut->openVirtualPort(portName);
 	}
 	catch(RtError& err) {
-		app::console() << "[ERROR ci::midi::MidiOut::openVirtualPort] couldn't open virtual port " << portName << " " << err.getMessage() << std::endl;
+        std::cout << "[ERROR ci::midi::MidiOut::openVirtualPort] couldn't open virtual port " << portName << " " << err.getMessage() << std::endl;
 		return false;
 	}
 	
 	mPortName = portName;
 	mIsVirtual = true;
 	if (sVerboseLogging)
-		app::console() << "[VERBOSE ci::midi::MidiOut::openVirtualPort] opened virtual port " << portName << std::endl;
+		std::cout << "[VERBOSE ci::midi::MidiOut::openVirtualPort] opened virtual port " << portName << std::endl;
 	return true;
 }
 
@@ -114,11 +119,11 @@ void MidiOut::closePort()
 		if(mIsVirtual)
 		{
 			assert(mPortNumber == -1); // ensure invariant is valid
-			app::console() << "[VERBOSE ci::midi::MidiOut::closePort] closed virtual port " << mPortName << std::endl;
+            std::cout << "[VERBOSE ci::midi::MidiOut::closePort] closed virtual port " << mPortName << std::endl;
 		}
 		else if(mPortNumber > -1)
 		{
-			app::console() << "[VERBOSE ci::midi::MidiOut::closePort] closed port " << mPortNumber << ": " << mPortName << std::endl;
+            std::cout << "[VERBOSE ci::midi::MidiOut::closePort] closed port " << mPortNumber << ": " << mPortName << std::endl;
 		}
 	}
 	mRtMidiOut->closePort();
@@ -220,7 +225,7 @@ void MidiOut::sendPitchBend(int channel, int value)
 {
 	if (value >>14 != 0)
 	{
-		app::console() << "[ERROR ci::midi::MidiOut::sendPitchBend] Pitch bend values must be less than " << (1<<14) << std::endl;
+        std::cout << "[ERROR ci::midi::MidiOut::sendPitchBend] Pitch bend values must be less than " << (1<<14) << std::endl;
 	}
 	// least significant 7 bits, most significant 7 bits (assuming 14 bit value)
 	sendPitchBend(channel, value & 0x7F, (value>>7) & 0x7F);

@@ -31,7 +31,6 @@
  *	Connects to ALL present MIDI devices
  */
 
-#include "cinder/app/AppBasic.h"
 #include "MidiHub.h"
 
 namespace cinder { namespace midi {
@@ -86,11 +85,11 @@ namespace cinder { namespace midi {
 	// --------------------------------------------------------------------------------------
 	void Hub::update()
 	{
-		/// check only once per second
+/*		/// check only once per second
 		static int sec = 0;
-		if ( sec == (int) app::getElapsedSeconds() )
+		if ( sec == (int) timeInSecs )
 			return;
-		sec = (int) app::getElapsedSeconds();
+		sec = (int) timeInSecs;*/
 		
 		// new devices?
 		//printf("MIDI CHECK...\n");
