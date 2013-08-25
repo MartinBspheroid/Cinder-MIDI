@@ -27,6 +27,8 @@
 #pragma once
 
 #include "MidiHeaders.h"
+#include "cinder/app/AppBasic.h"
+
 /*#include "MidiConstants.h"
 #include "RtMidi.h"
 #include "MidiExceptions.h"

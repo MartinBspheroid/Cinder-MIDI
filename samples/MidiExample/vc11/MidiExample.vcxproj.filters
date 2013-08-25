@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Blocks">
+      <UniqueIdentifier>{40e70fb5-643f-4364-8c93-4b2867e1290c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Cinder-MIDI">
+      <UniqueIdentifier>{cbbf8ff5-ac08-43a4-bcd6-0813f622180b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Cinder-MIDI\include">
+      <UniqueIdentifier>{89938322-3c91-457c-a74c-4624d6d348fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Cinder-MIDI\src">
+      <UniqueIdentifier>{560a046b-5bf0-4af5-a176-087eec83894e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\MidiExampleApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\MidiHub.cpp">
+      <Filter>Blocks\Cinder-MIDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\MidiIn.cpp">
+      <Filter>Blocks\Cinder-MIDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\MidiMessage.cpp">
+      <Filter>Blocks\Cinder-MIDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\MidiOut.cpp">
+      <Filter>Blocks\Cinder-MIDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\RtMidi.cpp">
+      <Filter>Blocks\Cinder-MIDI\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\MidiConstants.h">
+      <Filter>Blocks\Cinder-MIDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\MidiExceptions.h">
+      <Filter>Blocks\Cinder-MIDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\MidiHeaders.h">
+      <Filter>Blocks\Cinder-MIDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\MidiHub.h">
+      <Filter>Blocks\Cinder-MIDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\MidiIn.h">
+      <Filter>Blocks\Cinder-MIDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\MidiMessage.h">
+      <Filter>Blocks\Cinder-MIDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\MidiOut.h">
+      <Filter>Blocks\Cinder-MIDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\RtError.h">
+      <Filter>Blocks\Cinder-MIDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\RtMidi.h">
+      <Filter>Blocks\Cinder-MIDI\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -36,7 +36,16 @@
 /**********************************************************************/
 
 // RtMidi: Version 1.0.11
-
+#if defined( linux )
+#warning "Using MIDI LINUX"
+	#define __LINUX_ALSASEQ__
+#elif defined(WIN32)
+//#warning "Using MIDI MSW"
+	#define __WINDOWS_MM__
+#elif defined(__APPLE__)
+#warning "Using MIDI MAC"
+	#define __MACOSX_CORE__
+#endif
 #ifndef RTMIDI_H
 #define RTMIDI_H
 

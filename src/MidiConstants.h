@@ -31,7 +31,7 @@
 #warning "Using MIDI LINUX"
 	#define __LINUX_ALSASEQ__
 #elif defined(WIN32)
-#warning "Using MIDI MSW"
+//#warning "Using MIDI MSW"
 	#define __WINDOWS_MM__
 #elif defined(__APPLE__)
 #warning "Using MIDI MAC"
