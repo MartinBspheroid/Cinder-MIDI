@@ -33,13 +33,16 @@
 
 #pragma once
 
-#include "MidiConstants.h"
+#include "MidiHeaders.h"
+/*#include "MidiConstants.h"
 #include "MidiIn.h"
 //#include "MidiOut.h"
-#include "MidiMessage.h"
+#include "MidiMessage.h"*/
 
 namespace cinder { namespace midi {	
 	
+    class Input;
+    
 	class Hub {
 	public:
 		Hub();

@@ -26,11 +26,12 @@
 
 #pragma once
 
+#include "MidiHeaders.h"
+/*#include "MidiConstants.h"
 #include "RtMidi.h"
-
 #include "MidiExceptions.h"
 #include "MidiMessage.h"
-#include "MidiConstants.h"
+*/
 
 namespace cinder { namespace midi {
 ///

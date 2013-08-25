@@ -31,14 +31,14 @@
 #include <deque>
 #include <string>
 #include <iostream>
-
+#include "MidiHeaders.h"
+/*
 #include "MidiConstants.h"
 #include "RtMidi.h"
 
 #include "MidiExceptions.h"
 #include "MidiMessage.h"
-
-//#include <boost/signal.hpp>
+*/
 
 
 namespace cinder { namespace midi {

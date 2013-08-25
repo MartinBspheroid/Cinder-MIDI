@@ -40,7 +40,6 @@
 #ifndef RTMIDI_H
 #define RTMIDI_H
 
-#include "MidiConstants.h"
 #include "RtError.h"
 #include <string>
 
