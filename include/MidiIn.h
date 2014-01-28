@@ -75,7 +75,7 @@ protected:
 	unsigned int mPort;
 	std::string mName;
 	std::deque<Message*> mMessages;
-
+	int mBufferSize;
 
 };
 
