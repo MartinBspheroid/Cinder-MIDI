@@ -56,7 +56,7 @@ public:
 	void closePort();
 	void processMessage(double deltatime, std::vector<unsigned char> *message);
 	unsigned int getPort()const;
-	
+	void ignoreTypes(bool sysex, bool time, bool midisense);
 	bool hasWaitingMessages();
 	bool getNextMessage(Message*);
 	
@@ -75,7 +75,7 @@ protected:
 	unsigned int mPort;
 	std::string mName;
 	std::deque<Message*> mMessages;
-	int mBufferSize;
+
 
 };
 
